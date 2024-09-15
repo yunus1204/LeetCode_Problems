@@ -1,0 +1,17 @@
+class Solution {
+    public int[] countBits(int n) {
+        int ans[]=new int[n+1];
+        for(int i=0;i<=n;i++)
+        {
+            int p=i;
+            int co=0;
+            while(p!=0)
+            {
+                co+=(p&1);
+                p=p>>1;
+            }
+            ans[i]=co;
+        }
+        return ans;
+    }
+}
